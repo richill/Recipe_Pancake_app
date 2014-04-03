@@ -1,0 +1,52 @@
+<html>
+<head>
+  <title>Pancake Recipes</title>
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="js/jquery-2.1.0.js"></script>
+  <script src="js/underscore.js"></script>
+  <script src="js/backbone.js"></script>
+  <script src="js/application.js"></script>
+
+  <script type="text/template" id="tmpl_recipe">
+    <p> <h4> <%= name %> </h4>
+    Decription: <%= description %> </br>
+    Ingredients: <%= ingredient %>
+    <%= image %> </p>
+    <span class="closebutton">| delete recipe |</span>
+  </script>
+
+  <script type="text/tenplate" id="tmpl_flash">
+    <%= message %>!
+  </script>
+
+  <script type="text/template" id ="tmpl_recipelist">
+    <h2>All Pancake Recipes</h2>
+    <p id="flash"></p>
+    <p class="empty_recipelist">you currently have no pancake recipes</p>
+    <ul class="recipelist"></ul>
+  </script>
+</head>
+
+<body>
+  <header>
+    <h1>Pancake Recipes</h1>
+  </header>
+  <div id="app_container">
+    
+    <fieldset>
+      <form id="add" action="#">
+        <label for="name">Pancake Name: </label><input id="name" name="name" placeholder="name" /> 
+        <label for="description">Description: </label><input id="description" name="description" placeholder="description" />
+        <label for="ingredient">Ingredients: </label><input id="ingredient" name="ingredient" placeholder="add ingredients" />
+        <input type="file" name="image" id="image" accept="image/*">
+        <input type="submit" class="formbutton" value="Add Recipe" />
+      </form>
+  </fieldset>
+    <div id="recipelist_container"></div>
+  </div>
+<body>
+<html>
+
+
